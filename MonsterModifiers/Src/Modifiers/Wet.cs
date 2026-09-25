@@ -40,7 +40,7 @@ public class Wet
                 return;
             }
             
-            __instance.GetSEMan().AddStatusEffect("Wet".GetStableHashCode());
+            __instance.GetSEMan().AddStatusEffect("Wet".GetStableHashCode(), variant: -1);
         }
     }
 }

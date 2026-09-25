@@ -45,7 +45,7 @@ public class BloodLoss
             if (!__instance.GetSEMan().HaveStatusEffect("BloodLossStatusEffect".GetStableHashCode()))
             {
                 // Debug.Log("Player does not have bloodLoss, now adding status effect");
-                __instance.GetSEMan().AddStatusEffect("BloodLossStatusEffect".GetStableHashCode());  
+                __instance.GetSEMan().AddStatusEffect("BloodLossStatusEffect".GetStableHashCode(), variant: -1);
             }
         }
     }

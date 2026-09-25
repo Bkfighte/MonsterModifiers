@@ -174,7 +174,7 @@ public class DeathSpawns
                             continue;
                         }
                         
-                        character.GetSEMan().AddStatusEffect("HealDeathStatusEffect".GetStableHashCode(),false,0,healAmount);
+                        character.GetSEMan().AddStatusEffect("HealDeathStatusEffect".GetStableHashCode(),false,0,healAmount, variant: -1);
                         // Debug.Log("Character with name: " + character.name + " was given HealDeath status effect");
                     }
             
@@ -187,7 +187,7 @@ public class DeathSpawns
                             continue;
                         }
                         
-                        character.GetSEMan().AddStatusEffect("HealDeathStatusEffect".GetStableHashCode(),true,0,healAmount);
+                        character.GetSEMan().AddStatusEffect("HealDeathStatusEffect".GetStableHashCode(),true,0,healAmount, variant: -1);
                         // Debug.Log("Player with name: " + character.name + " was given HealDeath status effect");
                     }
                 }
@@ -223,7 +223,7 @@ public class DeathSpawns
                             continue;
                         }
                         
-                        character.GetSEMan().AddStatusEffect("Tared".GetStableHashCode());
+                        character.GetSEMan().AddStatusEffect("Tared".GetStableHashCode(), variant: -1);
                     }
             
                     List<Player> nearbyPlayers = new List<Player>();
@@ -235,7 +235,7 @@ public class DeathSpawns
                             continue;
                         }
                         
-                        character.GetSEMan().AddStatusEffect("Tared".GetStableHashCode());
+                        character.GetSEMan().AddStatusEffect("Tared".GetStableHashCode(), variant: -1);
                     }
                 }
             }

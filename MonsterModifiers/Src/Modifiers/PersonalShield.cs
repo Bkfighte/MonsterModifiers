@@ -10,7 +10,7 @@ public class PersonalShield
     {
         // Debug.Log("Monster with name " + character.m_name + " has modifier personal Shield");
         int hashName = "GoblinShaman_shield".GetStableHashCode();
-        character.GetSEMan().AddStatusEffect(hashName, true, 10, 2.0f);
+        character.GetSEMan().AddStatusEffect(hashName, true, 10, 2.0f, variant: -1);
     }
     
     public static void RemovePersonalShield(Character character)
