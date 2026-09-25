@@ -18,7 +18,7 @@ namespace MonsterModifiers
             GameObject prefab = ZNetScene.instance.GetPrefab(creatureName);
             if (prefab == null)
             {
-                Player.m_localPlayer.Message(MessageHud.MessageType.TopLeft, "Missing object " + creatureName, 0, (Sprite)null);
+                Player.m_localPlayer.Message(MessageHud.MessageType.TopLeft, "Missing object " + creatureName, 0, (Sprite)null, log: false);
                 return;
             }
             
@@ -42,7 +42,7 @@ namespace MonsterModifiers
             }
             else
             {
-                Player.m_localPlayer.Message(MessageHud.MessageType.TopLeft, "Invalid modifier name: " + modifierName, 0, (Sprite)null);
+                Player.m_localPlayer.Message(MessageHud.MessageType.TopLeft, "Invalid modifier name: " + modifierName, 0, (Sprite)null, log: false);
             }
         }
 
@@ -77,7 +77,7 @@ namespace MonsterModifiers
                     {
                         args.Context.AddString("Usage: modifier [creature] [modifier]");
                     }
-                }, isCheat: true, isNetwork: false, onlyServer: false);
+                }, isCheat: true, isNetwork: false, onlyServer: false, hideBehindDevCommands: false);
             }
         }
     }
